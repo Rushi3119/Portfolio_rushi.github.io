@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/96211c6e31.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+               
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>FRONT-END DEVELOPER</p>
+                <h1 class="ht-h1">Hi,I'm <span>Rushi</span><br></h1>
+            </div>
+
+            <div class="profile-pic">
+                <img src="4.png" alt="">
+            </div>  
+
+        </div>   
+    </div>  
+    <!---About-  -->  
+    <div id="about">  
+        <div class="container">   
+            <div class="row">  
+              <div class="about-col-1">  
+                <img src="website-development-process-1.jpg">
+              </div> 
+              <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> As a recent graduate from computer engineering .I am enthusiastic about leveraging my passion for technology to contribute meaningfully to the ever-evolving landscape of information technology. With a solid foundation in programming languages such as Java, SQL,Web Development along with hands-on experience in various software development projects during my academic journey, I am eager to embark on a professional career where I can apply my skills to solve real-world problems and innovate within the field.
+                    I am eager to explore new opportunities, grow as a professional, and make impactful contributions to the IT industry.</p>
+              
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p+>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>Database Management</span><br>Write efficient SQL queries, and ensure data integrity and security.</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Jan-June 2024</span><br>Web development Training at ECS Karad</li>
+                        <li><span>Bachelor of technology in Computer Science(2021-2024)</span><br>R.I.T,Islampur,Maharashtra(CGPA=7.75)<br></li>
+                        <li><span>High School Education(12th_2020)</span><br>L.P Jr. College Karad(79%)</li>
+
+                    </ul>
+                </div>
+                </div> 
+
+            </div>
+        </div>
+    </div>
+    <!-- ----Services---- -->
+    <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>Website Development</h2>
+        <p>With expertise in HTML, CSS, and JavaScript, I specialize in crafting visually appealing and user-friendly websites that meet the unique needs of clients and users alike. Whether it's building a responsive layout, optimizing for performance, or ensuring cross-browser compatibility, I am committed to delivering high-quality solutions that leave a lasting impression</p>
+        <a href="#">Learn more</a>
+    </div>
+    <div>
+        <i class="fa-sharp fa-solid fa-database"></i>
+        <h2>Database Management</h2>
+        <p>I bring a keen interest and foundational knowledge in database management and SQL query development. Proficient in SQL, I am adept at crafting efficient queries to retrieve, manipulate, and manage data within relational databases.</p>
+      <a href="#">Learn More</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- -----Contact---- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                <div class="sub-title">Contact Me</div>
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i>rushikesh.g.bamane@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone-flip"></i>7620712817</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/rushikesh-bamane-a36605253/" target="_main"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Rushi3119" target="_main"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/BamaneRushi?t=NS6e_fWHtUehaJJOjeOpTw&s=09"target="_main"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/r.u.s.h.i_22/"target="_main"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                
+                <div class="contact-right">
+                    <!-- web4form access key to add data in email -->
+                 <form  action="https://api.web3forms.com/submit" method="POST">   
+                    <input type="hidden" name="access_key" value="e93d3e3d-067d-4112-b7f9-c49e7b1bbcb8">
+                    <input type="text"name="Name" placeholder="Your Name" required>
+                    <input type="email"name="email" placeholder="Your Email" required>
+                    <input type="text"name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                 </form>
+                </div> 
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> Rushi...</p>
+        </div>
+        </div>
+
+    
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab"); 
+         
+        }
+    </script>
+    <script>
+        var sidemeu=document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right="0";
+        }
+        function closemenu(){
+            sidemeu.style.right="-200px";
+        }
+    </script>
+    
+</body>
+</html>
